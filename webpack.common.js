@@ -6,10 +6,6 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
-  // モード値を production に設定すると最適化された状態で、
-  // development に設定するとソースマップ有効でJSファイルが出力される
-  mode: "development",
-
   // メインとなるJavaScriptファイル（エントリーポイント）
   entry: "./src/index.ts",
   output: {
@@ -47,13 +43,6 @@ module.exports = {
       cesium: path.resolve(__dirname, cesiumSource),
     },
     mainFiles: ["index", "Cesium"],
-  },
-  // ローカル開発用環境を立ち上げる
-  // 実行時にブラウザが自動的に localhost を開く
-  devServer: {
-    static: "dist",
-    open: true,
-    port: 8080,
   },
   plugins: [
     // Copy Cesium Assets, Widgets, and Workers to a static directory
