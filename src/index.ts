@@ -66,4 +66,4 @@ redSphere.description =
     href="https://en.wikipedia.org/wiki/Statue_of_Liberty">Wikpedia</a>\
 </p>' as unknown as Property;
 
-viewer.zoomTo(viewer.entities);
+// viewer.zoomTo(viewer.entities);
